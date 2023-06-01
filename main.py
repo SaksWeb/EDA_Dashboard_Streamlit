@@ -8,10 +8,14 @@ from scipy import stats
 from streamlit_lottie import st_lottie
 import json
 import requests
-
+import openpyxl
+import os
 # Set page title and description
 st.set_page_config(page_title="Data Analysis Dashboard", layout="wide")
 
+def generate_ads_txt(publisher_id):
+    ads_txt_content = "google.com, " + publisher_id + ", DIRECT, f08c47fec0942fa0"
+    return ads_txt_content
 
 
 def get_url(url:str):
